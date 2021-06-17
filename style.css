@@ -1,0 +1,109 @@
+
+.letter {
+    width: 50px;
+    height: 50px;
+    font-size: 48px;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+
+.letter.highlight {
+    background-color: #a7d8ff;
+}
+
+.letter:focus {
+    background-color: #ffda00;
+}
+
+#clueDiv {
+    margin-bottom: 10px;
+}
+
+#clue {
+    font-size: 24px;
+    display: inline;
+}
+
+#clueNum {
+    font-size: 24px;
+    font-weight: bold;
+    display: inline;
+    margin-right: 5px;
+}
+
+input {
+    color: transparent;
+    text-shadow: 0px 0px 0px black;
+    border: 1px solid black;
+ }
+
+
+
+
+
+
+
+ #box00 {
+    background-image: url('numbers/number1.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50px 50px;
+ }
+
+ #box01 {
+    background-image: url('numbers/number2.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50px 50px;
+ }
+
+ #box02 {
+    background-image: url('numbers/number3.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50px 50px;
+ }
+
+ #box03 {
+    background-image: url('numbers/number4.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50px 50px;
+ }
+
+ #box04 {
+    background-image: url('numbers/number5.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50px 50px;
+ }
+
+ #box10 {
+    background-image: url('numbers/number6.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50px 50px;
+ }
+
+ #box20 {
+    background-image: url('numbers/number7.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50px 50px;
+ }
+
+ #box30 {
+    background-image: url('numbers/number8.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50px 50px;
+ }
+
+ #box40 {
+    background-image: url('numbers/number9.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50px 50px;
+ }
+
