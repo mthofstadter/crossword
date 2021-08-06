@@ -141,17 +141,17 @@ function highlight() {
 function clue() {
     const across = {
         0: "Airline of change", //Delta
-        1: "An oak's beginning", //Acorn
+        1: "Oak's beginning", //Acorn
         2: "The Golden Trio after the giant chess game", //noron
-        3: "Prickly plants", //cacti
+        3: "Prickly pears", //cacti
         4: "Delete", //erase
     };
     const down = {
-        0: "Prom or homecoming for example", //dance
+        0: "Prom for example", //dance
         1: "To echo in Portugese", //ecoar
         2: "Assassinated Spanish poet", //lorca
         3: "Walks quickly (for a horse)", //trots
-        4: "Maker of White Cheddar and Shells", //annie
+        4: "White Cheddar and Shells maker", //annie
     };
     if(directionHor) {
         document.getElementById("clue").innerText = across[activeRow];
@@ -187,6 +187,8 @@ function checkPuzzle() {
             }
         }
         window.alert("Congrats!");
+        var audio = new Audio('oh.m4a');
+        audio.play();
         return true;
     } else {
         // console.log("wrong");
