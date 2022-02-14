@@ -4,10 +4,11 @@ var deletePress = false;
 var invalidKey = false;
 var activeRow = 0;
 var activeCol = 0;
+var won = false;
 
 function onloadRender() {
     createGrid();
-    winner();
+    // winner();
 }
 
 function createGrid() {
@@ -187,10 +188,7 @@ function checkPuzzle() {
                 return false;
             }
         }
-        //window.alert("Congrats!");
         winner();
-        //var audio = new Audio('oh.m4a');
-        audio.play();
         return true;
     } else {
         return false;
@@ -198,7 +196,11 @@ function checkPuzzle() {
 }
 
 function winner() {
-    //do something
-    document.getElementById("winnercircle").classList.add("won");
-    document.getElementById("winMsg").classList.add("won2");
+    if(won == false) {
+        var audio = new Audio('drip.m4a');
+        audio.play();
+        document.getElementById("winnercircle").classList.add("won");
+        document.getElementById("winMsg").classList.add("won2");
+    }
+    won = true;
 }
