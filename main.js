@@ -144,17 +144,17 @@ function highlight() {
 function clue() {
     const across = {
         0: "Rebeka Librehombre por ejemplo", //Amiga
-        1: "Best feature of 6145 Pershing", //Dyson
-        2: "Taking an exam (if you\u{0027}re Keishi)", //Acing
+        1: "Best feature of 6145 Pershing (thanks Costco)", //Dyson
+        2: "Taking an exam (if you\u{0027}re Keishi) or serving a ball (if you\u{0027}re Sarah)", //Acing
         3: "Mikey vis-a-vis Ori and the Will of the Wisps", //Gamer
-        4: "Paltpusy enam", //Erpry
+        4: "sumafo paltpusy enam", //Erpry
     };
     const down = {
-        0: "Don\u{0027}t judge a bussy by its coverussy e.g.", //Adage
+        0: "Don\u{0027}t judge a book by its cover or Better late than never e.g.", //Adage
         1: "Your response to \u{0022}Who\u{0027}s Sheila?\u{0022}", //Mycar
         2: "\u{0022}_  _ _ _ _\u{0022} -Celli when asked about how he feels towards Lauren", //Isimp
         3: "Sarar after Katie\u{0027}s Pizza or Andy\u{0027}s", //Goner
-        4: "Might feel this upon seeing Thorgy", //Angry
+        4: "How you might feel upon seeing Thorgy", //Angry
     };
     if(directionHor) {
         document.getElementById("clue").innerText = across[activeRow];
