@@ -7,6 +7,7 @@ var activeCol = 0;
 
 function onloadRender() {
     createGrid();
+    winner();
 }
 
 function createGrid() {
@@ -95,6 +96,7 @@ function checkKey(box, event) {
         invalidKey = false;
      } else {
          invalidKey = true;
+         box.value = " ";
         return;
     }
     const key = event.key;
@@ -140,18 +142,18 @@ function highlight() {
 
 function clue() {
     const across = {
-        0: "Airline of change", //Delta
-        1: "Oak's beginning", //Acorn
-        2: "The Golden Trio after the giant chess game", //noron
-        3: "Prickly pears", //cacti
-        4: "Delete", //erase
+        0: "Rebeka Librehombre por ejemplo", //Amiga
+        1: "Best feature of 6145 Pershing", //Dyson
+        2: "Taking an exam (if you\u{0027}re Keishi)", //Acing
+        3: "Mikey vis-a-vis Ori and the Will of the Wisps", //Gamer
+        4: "Paltpusy enam", //Erpry
     };
     const down = {
-        0: "Prom for example", //dance
-        1: "To echo in Portugese", //ecoar
-        2: "Assassinated Spanish poet", //lorca
-        3: "Walks quickly (for a horse)", //trots
-        4: "White Cheddar and Shells maker", //annie
+        0: "Don\u{0027}t judge a bussy by its coverussy e.g.", //Adage
+        1: "Your response to \u{0022}Who\u{0027}s Sheila?\u{0022}", //Mycar
+        2: "\u{0022}_  _ _ _ _\u{0022} -Celli when asked about how he feels towards Lauren", //Isimp
+        3: "Sarar after Katie\u{0027}s Pizza or Andy\u{0027}s", //Goner
+        4: "Might feel this upon seeing Thorgy", //Angry
     };
     if(directionHor) {
         document.getElementById("clue").innerText = across[activeRow];
@@ -172,7 +174,7 @@ function clue() {
 }
 
 function checkPuzzle() {
-    const answer = Array.from("deltaacornnoroncactierase");
+    const answer = Array.from("amigadysonacinggamererpry");
     const puzzle = [];
     for(var i=0; i<5; i++) {
         for(var j=0; j<5; j++) {
@@ -182,16 +184,21 @@ function checkPuzzle() {
     if(puzzle.length == answer.length) {
         for(let i=0; i<puzzle.length; i++) {
             if(puzzle[i] != answer[i]) {
-                // console.log("wrong");
                 return false;
             }
         }
-        window.alert("Congrats!");
-        var audio = new Audio('oh.m4a');
+        //window.alert("Congrats!");
+        winner();
+        //var audio = new Audio('oh.m4a');
         audio.play();
         return true;
     } else {
-        // console.log("wrong");
         return false;
     }
+}
+
+function winner() {
+    //do something
+    document.getElementById("winnercircle").classList.add("won");
+    document.getElementById("winMsg").classList.add("won2");
 }

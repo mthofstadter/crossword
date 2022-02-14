@@ -1,3 +1,7 @@
+html, body {
+   height: 100%; 
+   overflow: hidden}
+
 
 .letter {
     width: 50px;
@@ -107,3 +111,55 @@ input {
     background-size: 50px 50px;
  }
 
+#winnercircle {
+   position: absolute;
+   top: -250px;
+   left: -250px;
+   z-index: -1;
+   border-radius: 40%;
+}
+
+.won {
+   background-color: #64eb2a;
+   animation-name: wonAnimation;
+   animation-duration: 4s;
+   animation-fill-mode: forwards;
+}
+
+ #winMsg {
+   display: none;
+   margin: auto;
+   width: 50%;
+   font-size: 48px;
+   font-family: Georgia, 'Times New Roman', Times, serif;
+   text-align: center;
+ }
+
+ #winMsg.won2 {
+   color: rgba(255,255,255,0);
+    display: block;
+    animation-name: won2Animation;
+    animation-duration: 2s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+ }
+
+ @keyframes wonAnimation {
+   from {
+      width: 0%;
+      height: 0vh;
+   }
+   to {
+      width: 150%;
+      height: 200vh;
+   }
+ }
+
+ @keyframes won2Animation {
+   from {
+      color: rgba(255,255,255,0);
+   }
+   to {
+      color: rgba(255,255,255,1);
+   }
+ }
